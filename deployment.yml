@@ -9,5 +9,7 @@ jobs:
   - name: nightly
     schedule: 0 0 * * *
     steps:
+      - name: install dependencies
+        command: dbt deps
       - name: run models
         command: dbt run
